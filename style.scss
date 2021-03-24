@@ -1,0 +1,1393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// kiểu font
+@font-face {
+    font-family: "Raleway-regular";
+    src: url("fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Raleway-regular";
+    src: url("fonts/Raleway-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Raleway-Bold";
+    src: url("fonts/Raleway-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Raleway-Semibold";
+    src: url("fonts/Raleway-SemiBold.ttf");
+}
+@font-face {
+    font-family: "Raleway-black";
+    src: url("fonts/Raleway-Black.ttf");
+}
+
+// setting color
+$primary:#EEBF00;
+$secondary:#232b38;
+$ternary:#6C6C6C;
+$danger:#FE4545;
+$pure:#FEFEFE;
+$light:#F0F0F0;
+$heaven:#FFFFFF;
+$footer:#2D333F;
+
+@mixin color($background-color: #232b38,
+$color:#FEFEFE) {
+    background-color: $background-color;
+    color: $color;
+}
+
+@mixin size($width,
+$height:$width) {
+    width: $width;
+    height: $height;
+}
+
+// body {
+//     height: 400rem;
+// }
+
+// tạo phần menu phía trên
+.container {
+    width: 100%;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+// responsive for container
+@media (min-width:576px) {
+    .topbar__container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width:768px) {
+    .topbar__container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width:992px) {
+    .topbar__container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width:1200px) {
+    .topbar__container {
+        max-width: 1152px;
+    }
+}
+
+.topbar {
+    @include color();
+    font-family: "Raleway-semobold";
+    padding: 0.75rem 0;
+    &__container {
+        width: 100%;
+        padding: 0 1.5rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__author div a {
+            color: #FEFEFE;
+            text-decoration: none;
+        }
+        &__author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__icons a {
+            margin-right: 0.6rem;
+        }
+        &__divider {
+            padding: 0 1rem;
+        }
+        &__author div img {
+            margin-right: 0.35rem;
+        }
+    }
+}
+
+.nav__top {
+    // cho thanh nav cách 1 khoản trắng
+    margin: 1.5rem 0;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        &-contact {
+            display: flex;
+            align-items: center;
+        }
+        &-message {
+            display: flex;
+            align-items: center;
+        }
+        &-contact h5,
+        &-message h5 {
+            margin: 0.5rem 0 0.3rem 0;
+        }
+        &-contact h6,
+        &-message h6 {
+            letter-spacing: 0.058rem;
+            font-size: 0.75rem;
+            color: #6C6C6C;
+        }
+        &-contact img,
+        &-message img {
+            margin: 0 0.9rem 0 0;
+        }
+    }
+}
+
+.nav__menu {
+    position: relative;
+    background-color: #FFFFFF;
+    &:after {
+        content: '';
+        display: block;
+        @include size(100%,
+        0.6rem);
+        background-image: url(icons/shadow.svg);
+        position: absolute;
+        bottom: -24px;
+        background-repeat: no-repeat;
+        // background-position: center;
+        z-index: -1;
+    }
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+    &__container a {
+        text-decoration: none;
+        color: #232b38;
+        font-size: 1rem;
+        padding: 0.5rem 1.6rem;
+        transition: all 0.25s ease;
+        cursor: pointer;
+    }
+    &__container a.active {
+        background-color: #EEBF00;
+        color: #FEFEFE;
+    }
+    &__container a:hover {
+        background-color: #EEBF00;
+        color: #FEFEFE;
+    }
+}
+
+// ảnh nền
+.header {
+    height: 600px;
+    background-image: url(images/hero.png);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    // margin: 0 0 0 1.5rem;
+    &__container {
+        margin: 0 0 0.25rem 11rem;
+        position: relative;
+        &__title span {
+            color: #232b38;
+            margin-right: 0.75rem;
+        }
+        &__title {
+            display: flex;
+            align-items: center;
+        }
+        // điều chỉnh vị trí cái ảnh
+        &__img img {
+            position: absolute;
+            top: -5rem;
+            right: 10rem;
+        }
+    }
+    &__container h1 {
+        color: #232b38;
+        font-size: 2.5rem;
+        margin-bottom: 0.7rem;
+    }
+    &__container h1 span {
+        color: #EEBF00;
+    }
+    &__container p {
+        width: 50%;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+    &__container__btn {
+        padding: 0.75rem 0.75rem;
+        border-radius: 4px;
+        border: none;
+        line-height: 0.8;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all .35s ease;
+        background-color: #ffda44;
+        color: #232b38;
+        border: 1px solid transparent;
+    }
+    &__container__btn1 {
+        padding: 0.75rem 0.75rem;
+        border-radius: 4px;
+        border: none;
+        line-height: 0.8;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all .35s ease;
+        background-color: #232b38;
+        color: #FFFFFF;
+        border: 1px solid transparent;
+    }
+    &__container__btn:hover {
+        background-color: #232b38;
+        color: #ffda44;
+        border: 1px solid #ffda44;
+    }
+    &__container__btn1:hover {
+        background-color: #FFFFFF;
+        color: #232b38;
+        border: 1px solid #232b23;
+    }
+    &__container button {
+        margin-right: 0.5rem;
+    }
+}
+
+section {
+    padding: 5rem 8rem;
+}
+
+hr {
+    border: 1px solid #F0F0F0;
+    opacity: 0.8;
+    margin: 1rem 0;
+}
+
+.top-product {
+    background-color: #F0F0F0;
+    &__container-heading {
+        text-align: center;
+        position: relative;
+        margin: 0 0 4rem 0;
+        // thanh logo dài
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            @include size(100%,
+            30px);
+            background-image: url(icons/hr.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            bottom: -40px;
+        }
+    }
+    // edit card
+    &__container-foodcard {
+        background-color: #FFFFFF;
+        padding: 1.5rem 0;
+        border-radius: 4px;
+    }
+    &__container-foodcard h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.25rem;
+    }
+    // tấm ảnh trong slide
+    &__container-product-img img {
+        @include size(80%,
+        200px);
+        padding-bottom: 1rem;
+        object-fit: contain;
+    }
+    // căng giữa cho bức tranh
+    &__container-product-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__container-stars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 0.5rem 0;
+    }
+    // cho khác ngôi sao khoảng cách ra
+    &__container-stars img {
+        margin: 0 0.25rem 0 0;
+    }
+    &__container-text,
+    &__container-price {
+        text-align: center;
+    }
+    &__container-price {
+        color: #FE4545;
+        margin: 0 0 1rem 0;
+    }
+    &__container-button {
+        color: #232b38;
+        background: #FFFFFF;
+        border: 2px solid #ffda44;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        width: 50%;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.35s ease;
+    }
+    &__container-button img {
+        background-color: #EEBF00;
+        padding: 0.4rem;
+        height: 2rem;
+        margin: 0 1.2rem 0 0;
+        display: flex;
+        align-items: center;
+    }
+    &__container-buy {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    &__container-button:hover {
+        background-color: #f5c815;
+        color: #FFFFFF;
+    }
+    &__container-slider-prev-btn {
+        @include size(2rem);
+        border: none;
+        background-color: #EEBF00;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        outline: none;
+        position: absolute;
+        top: 40%;
+        left: -4.5rem;
+        z-index: 1;
+    }
+    // nút lùi
+    &__container-slider-prev-btn {
+        @include size(2rem);
+        border: none;
+        background-color: #EEBF00;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        outline: none;
+        position: absolute;
+        top: 40%;
+        left: -5rem;
+        z-index: 1;
+    }
+    // nút tới
+    &__container-slider-next-btn {
+        @include size(2rem);
+        border: none;
+        background-color: #EEBF00;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        outline: none;
+        position: absolute;
+        top: 40%;
+        right: -5rem;
+        z-index: 1;
+    }
+    &__container-slider {
+        position: relative;
+    }
+    &__container-wrapper {
+        // color: #FFFFFF;
+        // border: 2px solid #ffda44;
+        // align-items: center;
+        cursor: pointer;
+        text-align: center;
+        margin: 4.5rem 0 0 0;
+    }
+    &__container-btnsecond {
+        background-color: #181715;
+        color: #FEFEFE;
+        padding: 0.6rem 1.3rem;
+        border-radius: 4px;
+    }
+}
+
+// .topbar__container-foodcard.slick-slide.slick-curent.slick-active{}
+// .top-product__container-sliderfood.slick-initialized.slick-slider {
+//     margin: 0 2.7rem;
+// }
+.slick-slide {
+    // float: left;
+    margin: 0 2.3rem;
+    // height: 100%;
+}
+
+.slick-list {
+    margin: 0 -2.3rem;
+}
+
+.About-Meal {
+    &__container {
+        // display: flex;
+        &-title {
+            text-align: center;
+            position: relative;
+            margin: 0 0 6rem 0;
+            // thanh logo dài
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                @include size(100%,
+                30px);
+                background-image: url(icons/hr.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                bottom: -40px;
+            }
+        }
+        &-wrap {
+            // display: flex;
+            // flex-direction: column;
+            // flex-wrap: nowrap;
+            cursor: pointer;
+            // text-align: center;
+            margin: -2.5rem 0 0 1rem;
+            background-color:#fafafd;
+        }
+        &__img img {
+         width:100%;
+        margin: 0 0 0 0;
+        object-fit: cover;
+        }
+        // &__img{
+        //     display:flex;
+
+        // }
+        &__imgfood {
+            display: flex;
+            justify-content: center;
+        }
+        &__flex {
+            flex: 1;
+            // display: flex;
+        }
+        &__flex h2 {
+            font-size: 1.5rem;
+            color: #232b38;
+            margin: 1rem 0 2rem 3rem;
+            // line-height: 1.3;
+        }
+        &__flex p {
+            margin: -15px 0 1rem 2rem;
+            line-height: 1.8;
+        }
+        &-btn {
+            background-color: #181715;
+            color: #FEFEFE;
+            padding: 0.6rem 1.3rem;
+            border-radius: 4px;
+            margin: 1rem 0 0 9rem;
+        }
+    }
+}
+
+// .slick-track {
+//     height:350px;
+//     opacity: 1;
+//     height: 400px;
+//     width: 10530px;
+//     transform: translate3d(-1170px, 0px, 0px);
+// }
+
+// .slick-initialized .slick-slider {
+//     display: flex;
+// }
+// .slick-initialized .slick-slide {
+//     display: flex;
+// }
+.out-services{
+    background-color:#F0F0F0 ;
+    position:relative;
+    z-index:0;
+    &__container{
+        &-card{
+            background-color: #FFFFFF;
+            text-align:center;
+            padding:2rem;
+            position:relative;
+            padding-top:4rem;
+            border-radius: 0.4rem;
+            margin:0 2.7rem 0 0;
+            &__btn{
+                background-color: #181715;
+                color: #FEFEFE;
+                padding: 0.6rem 1.3rem;
+                border-radius: 4px;
+                // margin: 1rem 0 0 9rem;
+            }
+            &__btn2{
+                background-color: #f7c563;
+                color: #141313;
+                padding: 0.6rem 1.3rem;
+                border-radius: 4px;
+                border: 1px solid #f7c563;
+                outline: none;
+                // margin: 1rem 0 0 9rem;
+            }
+            &__btn2:hover{
+                background-color: #181715;
+                color: #FEFEFE;
+            }
+            &-icon{
+                position:absolute;
+                // display:block;
+                top: -2.8rem;
+                left:50%;
+                transform: translateX(-50%);
+                // margin:0 0 2rem 0;
+        }
+        &-text{
+            color:#EEBF00;
+        }
+        }
+        &-card h2{
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        &-card p{
+            line-height: 1.6;
+            margin-bottom:1rem;
+        }
+
+        &__heading{
+            text-align: center;
+            position: relative;
+            margin: 0 0 6rem 0;
+            // thanh logo dài
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                @include size(100%,
+                30px);
+                background-image: url(icons/hr.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                bottom: -40px;
+            }
+        }
+        &-wrap{
+            display: flex;
+            margin: 5rem -2.7rem 0 0;
+        }
+    }
+}
+.big-banner{
+  // chèn hình nền vào
+    background-image :linear-gradient(to right bottom,rgba(35,43,56,0.9),rgba(35,43,56,0.9) ),url(images/meal.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    &__container{
+        &__heading{
+            text-align: center;
+            position: relative;
+            margin: 0 0 6rem 0;
+            color:#F0F0F0;
+            // thanh logo dài
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                @include size(100%,
+                30px);
+                background-image: url(icons/hr.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                bottom: -40px;
+            }
+        }
+        &__timer{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            margin:0 -2.5rem 0 0;
+        }
+        &__timer div{
+            margin:0 2.5rem 0 0;
+            background-color: #EEBF00;
+            @include size(12rem);
+            border-radius: 0.4rem;
+            display: flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content: center;
+        }
+        &__timer span:first-child {
+            font-size:2.7rem;
+            color:rgb(255, 249, 249);
+            margin:0 0 0.05rem 0;
+        }
+        &__timer span:last-child {
+            font-size:1.5rem;
+            color:#fff;
+        }
+    }
+}
+.last-banner{
+    background-color: #f0f0f0;
+    position:relative;
+    z-index:0;
+    &__container{
+
+        &__title{
+            text-align: center;
+            position: relative;
+            margin: 0 0 6rem 0;
+            // color:#F0F0F0;
+            // thanh logo dài
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                @include size(100%,
+                30px);
+                background-image: url(icons/hr.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                bottom: -40px;
+            }
+        }
+        &__card img{
+        //    @include size(100%);
+        width:100%;
+        }
+        &__card{
+            margin: 0 2rem 0 0 ;
+            background-color: #FFFFFF;
+            border-radius:0.4rem;
+            &-content{
+                padding:2rem;
+                &__post-meta{
+                    display:flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 1rem;
+                }
+                &__post-comment{
+                    margin:0 0 0 1rem;
+                }
+            }
+            &-content p{
+                line-height:1.6;
+            }
+        }
+        &__article{
+            display:flex;
+            margin: 0 -2rem 0 0;
+        }
+    }
+}
+.subscribe{
+    background-color: #EEBF00;
+    &__container{
+        display: flex;
+        align-items: center;
+        &__title h1{
+            font-size:1.5rem;
+            margin:0 0 1.6rem 0;
+        }
+        &__title p{
+            font-size:1rem;
+            margin:0 0 1.6rem 0;
+            line-height:1.5;
+        }
+    }
+    &__container>div:first-child img{
+        width:90%;
+    }
+    &__container div:first-child{
+        flex: 1;
+    }
+    &__container div:last-child{
+        flex: 1;
+    }
+    &__container__input-wrap{
+        background-color: #F0F0F0;
+        display: flex;
+        padding:0.3rem;
+        border-radius:0.4rem;
+    }
+    &__container__input-wrap input{
+        width: 100%;
+        border: none;
+        padding:0 1rem ;
+        font-size:1rem;
+    }
+    &__container__input-wrap button{
+        padding:0.8rem 2rem;
+        border: none;
+        background-color: #EEBF00;
+        color: #FEFEFE;
+        border-radius: 0.4rem;
+        font-size:1rem;
+        transition: all 0.25s ease;
+        outline: none;
+    }
+    &__container__input-wrap button:hover{
+        background-color: #080808;
+        color: #FEFEFE;
+    }
+    &__container__input-wrap input:focus{
+        outline: none;
+    }
+}
+.contact{
+    display: flex;
+    padding:0 0 0 0;
+    &-wrap{
+        padding: 4rem 0;
+        flex:1;
+        &__heading{
+            text-align: center;
+            position: relative;
+            margin: 0 0 4rem 0;
+            // thanh logo dài
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                @include size(100%,
+                30px);
+                background-image: url(icons/hr.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                bottom: -40px;
+            }
+        }
+        &__info{
+            display: flex;
+            justify-content: center;
+
+        }
+        &__info>div>div{
+            display: flex;
+            align-items: center;
+            margin:0 0 2rem 0 ;
+        }
+        &__info>div>div img{
+            margin:0 1rem 0 0;
+        }
+        &__info>div>div>div{
+            display: flex;
+            flex-direction:column;
+        }
+        &__info>div>div>div span:first-child{
+            margin: 0 0 0.25rem 0;
+            font-weight: 600;
+        }
+    }
+    &-map{
+        // padding:4rem 0;
+        filter: grayscale(100%);
+        flex:1;
+    }
+}
+.footer{
+    background-color: #2D333F;
+    padding:4rem 0;
+    &__container{
+        display: flex;
+        color: #FEFEFE;
+        &__box{
+            flex: 1;
+            margin: 0 2rem 0 0;
+            text-align: center;
+            &__btn{
+                background-color: #181715;
+                color: #FEFEFE;
+                padding: 0.4rem 1rem;
+                border-radius: 4px;
+                // margin: 1rem 0 0 9rem;
+            }
+        }
+        &__box h3{
+            border-bottom: 1px solid #f7d139;
+            padding-bottom: 1rem;
+            margin-bottom:1rem;
+        }
+        &__box p{
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        &__box ul li{
+            margin-bottom: 1rem;
+        }
+        &__box ul{
+            list-style-type: none;
+        }
+        &__box ul li a{
+            color: #f0f0f0;
+            text-decoration: none;
+            transition: all .3s ease;
+
+        }
+        // &-post {
+            &__box ul li a:hover{
+                color:#EEBF00;
+            }
+
+        // }
+        &__box:nth-child(3)>div{
+            display: flex;
+            justify-content: center;
+        }
+        &__box:nth-child(3){
+            text-align: left;
+        }
+        &__box:nth-child(3) h3{
+            text-align: center;
+        }
+        &__box:nth-child(3)a{
+            padding-left: 4.5rem;
+        }
+        &__box:nth-child(3) img{
+            margin: 0 1rem 0 0;
+        }
+        &__box:nth-child(3) ul li{
+            margin-bottom:1rem;
+        }
+    }
+}
+// chỉnh cho 6 tấm ảnh nhỏ lại
+.instagram-api img{
+   @include size(100%);
+    object-fit: cover;
+}
+.instagram-api{
+    &-post{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left:1.3rem;
+    }
+    &-post>div{
+        width:calc(1/3*100% - (1 - 1/3)*0.8rem);
+        margin-bottom:0.8rem;
+        // margin-left: 2rem;
+    }
+}
+.copyright{
+    padding:1rem 0;
+    background-color: #232b38 ;
+    color:#FEFEFE;
+    text-align: center;
+}
+.copyright a{
+    color:#fae208fd;
+    text-decoration: none;
+}
+// .main-wraper{
+//     position: relative;
+//     @include size(100%,100vh);
+//     overflow: hidden;
+//     &__nav{
+//         @include size(100%);
+//         background-color: #F0F0F0;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         padding:0;
+//         z-index: 1;
+//     }
+//     &__content{
+//         transform:scale(0.9) translateX(90%);
+//
+//         transition: all .3s ease;
+//         @include size(100%);
+//         position:absolute;
+//         background-color:#FFFFFF ;
+//         z-index:2;
+
+//         &-triger{
+//             position: absolute;
+//             top:0;
+//             left: 0;
+//             z-index: 1;
+//             padding:15px;
+//         }
+//         &-triger svg{
+//             transform:rotate(90deg)  scaleX(-1);
+//             @include size(40px);
+//         }
+
+//     }
+//     // thanh menu
+//     &__site-content{
+//         @include size(100%);
+//         position:absolute;
+//         background-color:#FFFFFF ;
+//         z-index:2;
+//          overflow-X:auto;
+
+
+//     }
+
+// }
+// .main-wraper__content .scale{
+//
+// }
+.main-wraper{
+    position: relative;
+    @include size(100%,100vh);
+    overflow: hidden;
+    &__nav__background{
+        @include size(100%);
+            background-color:#F0F0F0;
+            position:absolute;
+            top: 0;
+            left: 0;
+            padding:0;
+            z-index:1;
+    }
+    &__nav-triger{
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1;
+        padding: 15px;
+        display: none;
+    }
+    &__nav-triger svg{
+         transform: rotate(90deg)  scalex(-1);
+        @include size(40px);
+    }
+    &__site-content-wraper{
+        @include size(100%);
+        position: absolute;
+        background-color: #FFFFFF;
+        z-index:2;
+        transition:all .3s ease;
+        // transform: scale(0.9)  translateX(90%);
+        // border-radius:3px;
+        // box-shadow:0 3px 10px 0 #232b38;
+    }
+    &__site-content{
+        @include size(100%);
+        overflow-x: auto;
+    }
+    &__mobile-logo{
+        padding:1rem;
+    }
+    &__mobile-nav ul{
+        list-style-type: none;
+    }
+    &__mobile-nav ul li{
+        margin-bottom: 1rem;
+    }
+    &__mobile-nav ul li a{
+        text-decoration: none;
+        color: #232b38 ;
+        transition: all .3s ease;
+    }
+    &__mobile-nav ul li a:hover{
+        color:#EEBF00 ;
+    }
+    &__contact,&__time{
+        padding:1rem;
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+    }
+    &__contact img,&__time img{
+        margin:0 1rem 0 0;
+    }
+    &__contact h5, &__time h5{
+        margin: 0 0 0.25rem 0;
+        font-size: 1.5rem;
+    }
+    &__contact h6,&__time h6{
+        font-size:0.75rem;
+    }
+    &__mobile-nav{
+        padding: 1rem;
+        &__cart{
+            margin: 0 0 2rem 0;
+        }
+        &__cart a{
+            color: #232b38;
+            text-decoration: none;
+        }
+        &__cart div{
+            display: flex;
+            align-items: center;
+
+        }
+        &__cart img{
+            margin:0 0.75rem 0 0;
+            @include size(20px);
+        }
+    }
+}
+// .nav__background{
+//     @include size(100%);
+//     background-color:#F0F0F0;
+//     position:absolute;
+//     top: 0;
+//     left: 0;
+//     padding:0;
+//     z-index:1;
+// }
+// .nav-triger{
+//     position:absolute;
+//     top:0;
+//     left:0;
+//     z-index:1;
+//     padding: 15px;
+// }
+// .nav-triger svg{
+//     transform: rotate(90deg)  scalex(-1);
+//     @include size(40px);
+// }
+// .site-content-wraper{
+//     @include size(100%);
+//     position: absolute;
+//     background-color: #FFFFFF;
+//     z-index:2;
+//     transition:all .3s ease;
+// }
+.main-wraper__site-content-wraper.scale{
+    transform: scale(0.9)  translateX(90%);
+    border-radius:3px;
+     box-shadow:0 3px 10px 0 #232b38;
+}
+// .site-content{
+//     @include size(100%);
+//     overflow-x: auto;
+// }
+// responsive
+@media (max-width: 992px) {
+    .main-wraper{
+        &__nav-triger{
+            display:block;
+        }
+    }
+    .topbar,nav{
+        display:none;
+    }
+    .header{
+        // right: -16rem;
+        // top:100px;
+        margin: -4.5rem 0 0 0;
+        &__container{
+            &__img img{
+                right: -5rem;
+                top:100px;
+            }
+        }
+    }
+    .top-product{
+        &__container{
+            &-slider{
+                &-prev-btn{
+                    display: none!important;
+                }
+                &-next-btn{
+                    display: none!important;
+                }
+            }
+            &-foodcard{
+                padding:0.5rem 0.1rem;
+            }
+            &-button{
+                width:80%;
+            }
+            &__button span{
+                text-align:center;
+            }
+        }
+    }
+    .last-banner{
+        &__container{
+            &__article{
+                flex-direction: column;
+            }
+            &__card{
+                margin: 0 0 4rem 0;
+            }
+
+        }
+    }
+    .instagram-api{
+        &-post > div{
+            width: calc(1/3*100% - (1 - 1/3)*0.8rem);
+        }
+    }
+}
+@media (max-width: 768px) {
+        //    .top-product {
+        //        &__container{
+        //            &-product-img img{
+        //                width: 500px;
+        //            }
+        //        }
+        //    }
+        .About-Meal{
+            &__container{
+                &-wrap{
+                    flex-direction: column;
+                }
+                &-wrap img{
+                    width: 100%;
+                    margin:0 0 2rem 0;
+                }
+            }
+        }
+        .out-services{
+            &__container{
+                &-wrap{
+                    flex-direction: column;
+                }
+                &-card{
+                    margin:0 0 6rem -3rem;
+                }
+            }
+        }
+        .footer{
+            &__container{
+                flex-direction: column;
+                &__box{
+                    text-align: left;
+                    // margin-left:80px;
+                    // margin-right:80px;
+                    margin: 0 5rem 2rem 5rem;
+                }
+                &__box:nth-child(3) h3{
+                    text-align: left;
+                }
+                &__box:nth-child(3) > ul  {
+                    // text-align: left;
+                    display: block;
+                    margin-left:-4.5rem;
+
+                }
+            }
+        }
+}
+@media (max-width:576px){
+    .header{
+        margin:-1.5rem 0 0 0;
+        &__container{
+            padding:0 0 0 0.3rem;
+            margin-left:0.5rem;
+            &__img img{
+                right:-90px;
+                top:150px;
+                width:300px;
+                object-fit: cover;
+            }
+        }
+    }
+          .top-product {
+               &__container{
+                   width:300px;
+                   margin:0 0 0 -4.5rem;
+                //    &-product-img img{
+                //        width: 500px;
+                //    }
+               }
+           }
+    .About-Meal{
+        &__container{
+            width:300px;
+            margin:0 0 0 -4.5rem;
+            &-wrap{
+                margin: -2.5rem 0 0 0.3rem;
+            }
+            &__flex h2{
+                margin: 0.5rem 0 2rem 1.7rem;
+            }
+            &__flex p{
+                margin:-15px 0 1rem 1rem;
+            }
+        }
+    }
+    .big-banner{
+        &__container {
+            &__timer > div {
+                padding:0.5rem;
+                margin: 0 0.5rem 0 0;
+            }
+            &__timer{
+                // padding:-1.5rem;
+                margin:0 -0.5rem 0 0;
+            }
+        }
+    }
+    .last-banner{
+        &__container{
+            width:300px;
+            margin: 0 0 0 -5.5rem;
+        }
+    }
+    .subscribe{
+        &__container{
+            flex-direction: column;
+            padding:1rem;
+            & > div:first-child{
+                width:320px;
+                margin: 0 0 0 1rem;
+            }
+            &__title h1{
+                font-size: 1.6rem;
+            }
+            &__input-wrap input{
+                padding:0 6.5rem;
+            }
+        }
+    }
+    .contact{
+        &-wrap {
+            padding: 4rem 0.3rem;
+        }
+    }
+    .instagram-api{
+        &-post{
+            margin:2rem 0 0 -1.8rem;
+            flex-direction: column;
+        }
+
+    }
+    .instagram-api img{
+        width:300px;
+    }
+}
+@media (max-width:375px) {
+    .header{
+    margin:0.5rem 0 0 0;
+    &__container{
+        padding:0 0 0 0.5rem;
+        // margin-left:0.5rem;
+        &__img img{
+            right:-85px;
+            top:180px;
+            width:250px;
+            object-fit: cover;
+        }
+
+    }
+    &__container p{
+        width:60%;
+    }
+    }
+    .top-product {
+        &__container{
+            width:250px;
+            margin:0 0 0 -6rem;
+         //    &-product-img img{
+         //        width: 500px;
+         //    }
+        }
+    }
+    .About-Meal{
+        &__container{
+            width:250px;
+            margin:0 0 0 -6rem;
+            &-title{
+                margin:0 0 6rem 0.3rem;
+            }
+            &-wrap{
+                margin: -2.5rem 0 0 0.3rem;
+            }
+            &__flex h2{
+                margin: 0.5rem 0 2rem 1.7rem;
+            }
+            &__flex p{
+                margin:-15px 0 1rem 1rem;
+            }
+        }
+    }
+    .out-services{
+        &__container{
+            width:200px;
+            margin:0 0 0 -4.2rem;
+        }
+    }
+    .big-banner{
+        &__container {
+            &__heading{
+                margin: 0 -8rem 6rem ;
+            }
+            &__timer > div {
+                padding:0.2rem;
+                margin: 0 0.6rem 0 -0.2rem;
+            }
+            &__timer{
+                // padding:-1.5rem;
+                margin:0 -0.5rem 0 0;
+            }
+        }
+    }
+    .last-banner{
+        &__container{
+            width:250px;
+            margin: 0 0 0 -6.6rem;
+            &__title{
+                margin: 0 -2rem 6rem 0;
+            }
+        }
+    }
+    .subscribe{
+        &__container{
+            flex-direction: column;
+            padding:1rem;
+            & > div:first-child{
+                width:320px;
+                margin: 0 0 0 1rem;
+            }
+            &__title h1{
+                font-size: 1.6rem;
+            }
+            &__input-wrap input{
+                padding:0 5.5rem;
+            }
+        }
+    }
+    .contact{
+        &-wrap {
+            padding: 3.5rem 0.2rem;
+        }
+    }
+    .instagram-api{
+        &-post{
+            margin:2rem 0 0 -2.5rem;
+            flex-direction: column;
+        }
+
+    }
+    .instagram-api img{
+        width:250px;
+    }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <!-- thanh naviagtion -->
+    <div class="main-wraper">
+        <div class="main-wraper__nav__background">
+            <!-- tạo thanh navbar -->
+            <div class="main-wraper__mobile-logo">
+                <img src="icons/logo.svg" alt="">
+            </div>
+            <div class="main-wraper__mobile-nav">
+                <div class="main-wraper__mobile-nav__cart">
+                    <div>
+                        <img src="icons/cart-dark.svg" alt="">
+                        <a href="#">0 Items  -  ($0.00)</a>
+                    </div>
+                </div>
+                    <div class="main-wraper__nav__top">
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">About us</a>
+                            </li>
+                            <li>
+                                <a href="#">Products</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">Shop</a>
+                            </li>
+                            <li>
+                                <a href="#">Services</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact us</a>
+                            </li>
+                            <li>
+                                <a href="#">Log in</a>
+                            </li>
+                            <li>
+                                <a href="#">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main-wraper__contact">
+                        <img src="icons/phone.svg" alt="">
+                        <div>
+                            <h5>Call US:(+84) 246 1214 168</h5>
+                            <h6>E-mail : support@gmail.com</h6>
+                        </div>
+                    </div>
+                    <div class="main-wraper__time">
+                        <img src="icons/clock.svg" alt="">
+                        <div>
+                            <h5>Working Hours:</h5>
+                            <h6>Mon - Sat (8.00am - 12am)</h6>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="main-wraper__site-content-wraper scale">
+            <div class="main-wraper__nav-triger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-bar-chart">
+                <line x1="12" y1="20" x2="12" y2="10" />
+                <line x1="18" y1="20" x2="18" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="16" /></svg>
+            </div>
+            <div class="main-wraper__site-content">
+                   <!-- thanh trên cùng   -->
+    <header class="topbar">
+        <!-- bên trong của thanh trên cùng   -->
+        <div class="topbar__container">
+            <div class="topbar__container__icons">
+                <a href="#"><img src="icons/facebook.svg" alt=""></a>
+                <a href="#"><img src="icons/twitter.svg" alt=""></a>
+                <a href="#"><img src="icons/google.svg" alt=""></a>
+                <a href="#"><img src="icons/instagram.svg" alt=""></a>
+                <a href="#"><img src="icons/search.svg" alt=""></a>
+            </div>
+            <!-- phần login,register -->
+            <div class="topbar__container__author">
+                <div>
+                    <img src="icons/user-icon.svg" alt="">
+                    <a href="#">login</a>
+                </div>
+                <span class="topbar__container__divider">|</span>
+                <div>
+                    <img src="icons/edit.svg" alt="">
+                    <a href="#">register Now</a>
+                </div>
+                <span class="topbar__container__divider">|</span>
+                <div>
+                    <img src="icons/cart.svg" alt="">
+                    <a href="#">0 Items - ($0.00)</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- thanh navigation -->
+    <nav>
+        <div class="nav__top">
+            <div class="nav__top__container">
+                <div class="nav__top__container-contact">
+                    <img src="icons/phone.svg" alt="">
+                    <div>
+                        <h5>Call US:(+84) 246 1214 168</h5>
+                        <h6>E-mail : support@gmail.com</h6>
+                    </div>
+                </div>
+                <div class="nav__top__container-branding">
+                    <img src="icons/logo.svg" alt="">
+                </div>
+                <div class="nav__top__container-message">
+                    <img src="icons/bell.svg" alt="">
+                    <div>
+                        <h5>Working Hours:</h5>
+                        <h6>Mon - Sat (8.00am - 12am)</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- thanh menu -->
+        <div class="nav__menu">
+            <div class="nav__menu__container">
+                <a href="" class="active">Home</a>
+                <a href="">About Us</a>
+                <a href="">Product</a>
+                <a href="">Blog</a>
+                <a href="">Shop</a>
+                <a href="">Services</a>
+                <a href="">Galery</a>
+                <a href="">Contact Us</a>
+            </div>
+        </div>
+        <!-- ảnh nền  -->
+    </nav>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__container__title">
+                <span>Welcome to</span>
+                <img src="icons/logo-2.svg" alt="">
+            </div>
+            <h1>The World Best <span>Shoping</span> Website</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dignissimos animi, ad aspernatur optio, fugiat aliquid tenetur, saepe modi ducimus reiciendis excepturi. Veniam iste laudantium assumenda dolore cupiditate accusantium incidunt.</p>
+            <div>
+                <button class="header__container__btn">Read More</button>
+                <button class="header__container__btn1">Show more</button>
+            </div>
+            <!--tấm ảnh kế bên header  -->
+            <div class="header__container__img">
+                <img src="images/straw.png" alt="">
+            </div>
+        </div>
+    </header>
+    <!-- slide show thức ăn -->
+    <section class="top-product">
+        <div class="top-product__container">
+            <h1 class="top-product__container-heading">Top products</h1>
+            <div class="top-product__container-slider">
+                <!-- nút next và nút lùi cho slide -->
+                <button class="top-product__container-slider-prev-btn"><img src="icons/pre.svg" alt=""></button>
+                <button class="top-product__container-slider-next-btn"><img src="icons/next.svg" alt=""></button>
+                <div class="top-product__container-sliderfood">
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-1.png" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Rusian salad</h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/star-grey.svg" alt="">
+                                <img src="icons/star-grey.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-2.png" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Fried egg</h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/star-grey.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-3.png" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Tofu salad</h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/star-grey.svg" alt="">
+                                <img src="icons/star-grey.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-4.jpg" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Dessert With Milk</h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/star-grey.svg" alt="">
+                                <img src="icons/star-grey.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-5.jpg" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Shrimp Tamarind Sauce
+                            </h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-6.jpg" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Shrimp Tamarind Sauce
+                            </h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-7.jpg" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Shrimp Tamarind Sauce
+                            </h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-8.jpg" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Shrimp Tamarind Sauce
+                            </h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-9.jpg" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Shrimp Tamarind Sauce
+                            </h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-10.jpg" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Shrimp Tamarind Sauce
+                            </h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-11.jpg" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Shrimp Tamarind Sauce
+                            </h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-12.jpg" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Shrimp Tamarind Sauce
+                            </h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-13.jpg" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Shrimp Tamarind Sauce
+                            </h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-14.jpg" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Shrimp Tamarind Sauce
+                            </h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-product__container-foodcard">
+                        <div class="top-product__container-product-img">
+                            <img src="images/plate-15.jpg" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="top-product__container-text">Shrimp Tamarind Sauce
+                            </h2>
+                            <!-- tạo rate đánh giá thức ăn -->
+                            <div class="top-product__container-stars">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                                <img src="icons/start-filled.svg" alt="">
+                            </div>
+                            <div class="top-product__container-price">
+                                $ 1.25
+                            </div>
+                            <!-- thanh chọn  -->
+                            <div class="top-product__container-buy">
+                                <button class="top-product__container-button">
+                                    <img src="icons/cart-2.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-product__container-wrapper">
+                <button class="top-product__container-btnsecond">View More</button>
+            </div>
+        </div>
+    </section>
+    <!-- banner -->
+    <section class="About-Meal">
+        <div class="About-Meal__container">
+            <h1 class="About-Meal__container-title">About Fresh Meal</h1>
+            <div class="About-Meal__container-wrap">
+                <!-- <button class="top-product__container-slider-prev-btn"><img src="icons/pre.svg" alt=""></button>
+                <button class="top-product__container-slider-next-btn"><img src="icons/next.svg" alt=""></button> -->
+                <div class="About-Meal__container__img">
+                    <div class="About-Meal__container__imgfood">
+                    <img src="images/yogurt.png" alt="">
+                    </div>
+                    <div class="About-Meal__container__flex">
+                        <h2>Freshmeal is a long established fact that a render will be distracted</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, similique amet temporibus nesciunt, odit voluptates optio rem dolores saepe architecto autem libero recusandae tenetur alias nihil accusamus neque earum repellat.</p>
+                        <button class="About-Meal__container-btn">Read More</button>
+                    </div>
+                </div>
+
+                <div class="About-Meal__container__img">
+                     <div class="About-Meal__container__imgfood">
+                     <img src="images/orinal.jpg" alt="">
+                     </div>
+                    <div class="About-Meal__container__flex">
+                        <h2>Freshmeal is a long established fact that a render will be distracted</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, similique amet temporibus nesciunt, odit voluptates optio rem dolores saepe architecto autem libero recusandae tenetur alias nihil accusamus neque earum repellat.</p>
+                        <button class="About-Meal__container-btn">Read More</button>
+                    </div>
+                </div>
+                <div class="About-Meal__container__img">
+                    <div class="About-Meal__container__imgfood">
+                    <img src="images/combo1.jpg" alt="">
+                    </div>
+                   <div class="About-Meal__container__flex">
+                       <h2>Freshmeal is a long established fact that a render will be distracted</h2>
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, similique amet temporibus nesciunt, odit voluptates optio rem dolores saepe architecto autem libero recusandae tenetur alias nihil accusamus neque earum repellat.</p>
+                       <button class="About-Meal__container-btn">Read More</button>
+                   </div>
+               </div>
+               <div class="About-Meal__container__img">
+                <div class="About-Meal__container__imgfood">
+                <img src="images/combo2.jpg" alt="">
+                </div>
+               <div class="About-Meal__container__flex">
+                   <h2>Freshmeal is a long established fact that a render will be distracted</h2>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, similique amet temporibus nesciunt, odit voluptates optio rem dolores saepe architecto autem libero recusandae tenetur alias nihil accusamus neque earum repellat.</p>
+                   <button class="About-Meal__container-btn">Read More</button>
+               </div>
+           </div>
+            </div>
+        </div>
+    </section>
+    <!-- slider option -->
+    <section class="out-services">
+            <div class="out-services__container">
+                <h1 class="out-services__container__heading">Out Services</h1>
+                <div class="out-services__container-wrap">
+                    <div class="out-services__container-card">
+                        <img class="out-services__container-card-icon" src="icons/transport.svg" alt="">
+                        <h2>Free Home Dilivery</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="out-services__container-card__btn">Read More</button>
+                    </div>
+                    <div class="out-services__container-card">
+                        <img class="out-services__container-card-icon" src="icons/bag.svg" alt="">
+                        <h2 class="out-services__container-card-text">30 Days ReturnServices</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="out-services__container-card__btn2">Read More</button>
+                    </div>
+                    <div class="out-services__container-card">
+                        <img class="out-services__container-card-icon" src="icons/usd.svg" alt="">
+                        <h2>Money Back Guaranted</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="out-services__container-card__btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- banner thứ 3 -->
+    <section class="big-banner">
+        <div class="big-banner__container">
+                <h1 class="big-banner__container__heading">Big Deal For Week</h1>
+                <div class="big-banner__container__timer">
+                    <div class="">
+                        <span>05</span>
+                        <span>Days</span>
+                    </div>
+                    <div class="">
+                        <span>24</span>
+                        <span>Hours</span>
+                    </div>
+                    <div class="">
+                        <span>55</span>
+                        <span>Minutes</span>
+                    </div>
+                    <div class="">
+                        <span>58</span>
+                        <span>Seconds</span>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section class="last-banner">
+        <div class="last-banner__container">
+            <h1 class="last-banner__container__title">Lastest News From Blog</h1>
+            <!-- tạo một tấm ảnh có tiêu đề bên trong -->
+            <div class="last-banner__container__article">
+                <article class="last-banner__container__card">
+                    <div>
+                    <img src="images/donut.jpg" alt="">
+                    </div>
+                    <div class="last-banner__container__card-content">
+                     <div class="last-banner__container__card-content__post-meta">
+                            <!-- các dòng chữ -->
+                            <span>July 03, 2021</span>
+                            <div>
+                                <span>Posted By <strong>Freshmeal</strong> <span>
+                                <span class="last-banner__container__card-content__post-comment">50 Comments</span>
+                            </div>
+                        </div>
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex minima, soluta debitis adipisci unde doloremque magni, voluptas vitae delectus iste placeat cupiditate at non laborum vero dolore beatae nihil corrupti!</p>
+                    </div>
+                </article>
+                <article class="last-banner__container__card">
+                    <div>
+                    <img src="images/coffee.jpg" alt="">
+                    </div>
+                    <div class="last-banner__container__card-content">
+                     <div class="last-banner__container__card-content__post-meta">
+                            <!-- các dòng chữ -->
+                            <span>July 03, 2021</span>
+                            <div>
+                                <span>Posted By <strong>Freshmeal</strong> <span>
+                                <span class="last-banner__container__card-content__post-comment">100 Comments</span>
+                            </div>
+                        </div>
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex minima, soluta debitis adipisci unde doloremque magni, voluptas vitae delectus iste placeat cupiditate at non laborum vero dolore beatae nihil corrupti!</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- footer  -->
+    <section class="subscribe">
+        <div class="subscribe__container">
+            <div>
+                <img src="images/rasberry.png" alt="">
+            </div>
+            <div class="subscribe__container__title">
+                    <h1>Subscribe to your newsletter</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, dolorum suscipit sapiente temporibus quam vitae tenetur dolore.</p>
+                    <div class="subscribe__container__input-wrap">
+                        <input type="email" placeholder="email@gmail.com">
+                        <button>Subscribe</button>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact banner -->
+    <section class="contact">
+        <div class="contact-wrap">
+            <h1 class="contact-wrap__heading">Contact us</h1>
+            <div class="contact-wrap__info">
+                <div>
+                    <div>
+                        <img src="icons/phone-2.svg" alt="">
+                        <div>
+                            <span>Call us</span>
+                            <span>(+84) 123 456 789</span>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="icons/bag-2.svg" alt="">
+                        <div>
+                            <span>Email: </span>
+                            <span>suport@gmail.com</span>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="icons/clock-2.svg" alt="">
+                        <div>
+                            <span>Working hours</span>
+                            <span>Mon-Sat (8.00am - 12.00am)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206265.04909830092!2d-115.29647369760188!3d36.120503634643654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x16f5b670e1907cb8!2sPeppermill%20Las%20Vegas!5e0!3m2!1svi!2s!4v1615645750880!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__container__box">
+                <h3>About us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ut minus unde sint aliquid cumque illo fugit, totam ea, voluptas suscipit quaerat est alias molestias quae? Ipsum officia a modi.</p>
+                <button class="footer__container__box__btn">Read more</button>
+            </div>
+            <div class="footer__container__box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Products</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Galery</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__container__box">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="icons/facebook.svg" alt="">
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="icons/twitter.svg" alt="">
+                            <span>Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="icons/google.svg" alt="">
+                            <span>Google</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="icons/instagram.svg" alt="">
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__container__box instagram-api">
+                <h3>Instagram</h3>
+                <div  class="footer__container__box  instagram-api-post">
+                    <div>
+                        <img src="images/food-table.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="images/food-table.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="images/food-table.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="images/food-table.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="images/food-table.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="images/food-table.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- copy righ -->
+    <footer class="copyright">
+        <div>
+            Copyright © 2021.All rights reserved By <a href="#">Sun</a>
+        </div>
+    </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script> -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/app.js">
+    </script>
+</body>
+
+</html>
