@@ -987,12 +987,12 @@ hr {
 
   .top-product__container {
     width: 300px;
-    margin: 0 0 0 -4.5rem;
+    margin: 0 0 0 -5.3rem;
   }
 
   .About-Meal__container {
     width: 300px;
-    margin: 0 0 0 -4.5rem;
+    margin: 0 0 0 -5.3rem;
   }
   .About-Meal__container-wrap {
     margin: -2.5rem 0 0 0.3rem;
@@ -1012,9 +1012,14 @@ hr {
     margin: 0 -0.5rem 0 0;
   }
 
+  .out-services__container {
+    width: 200px;
+    margin: 0 0 0 -2.3rem;
+  }
+
   .last-banner__container {
     width: 300px;
-    margin: 0 0 0 -5.5rem;
+    margin: 0 0 0 -6rem;
   }
 
   .subscribe__container {
@@ -1037,7 +1042,7 @@ hr {
   }
 
   .instagram-api-post {
-    margin: 2rem 0 0 -1.8rem;
+    margin: 2rem 0 0 -2rem;
     flex-direction: column;
   }
 
@@ -1064,12 +1069,12 @@ hr {
 
   .top-product__container {
     width: 250px;
-    margin: 0 0 0 -6rem;
+    margin: 0 0 0 -5.1rem;
   }
 
   .About-Meal__container {
     width: 250px;
-    margin: 0 0 0 -6rem;
+    margin: 0 0 0 -5.1rem;
   }
   .About-Meal__container-title {
     margin: 0 0 6rem 0.3rem;
@@ -1086,7 +1091,7 @@ hr {
 
   .out-services__container {
     width: 200px;
-    margin: 0 0 0 -4.2rem;
+    margin: 0 0 0 -3rem;
   }
 
   .big-banner__container__heading {
@@ -1102,7 +1107,7 @@ hr {
 
   .last-banner__container {
     width: 250px;
-    margin: 0 0 0 -6.6rem;
+    margin: 0 0 0 -5.5rem;
   }
   .last-banner__container__title {
     margin: 0 -2rem 6rem 0;
@@ -1128,7 +1133,7 @@ hr {
   }
 
   .instagram-api-post {
-    margin: 2rem 0 0 -2.5rem;
+    margin: 2rem 0 0 -2.1rem;
     flex-direction: column;
   }
 
